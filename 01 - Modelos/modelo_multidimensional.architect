@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.9">
+ <project-name>fato_processo</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="PlayPen Database" />
+  </data-source>
+  <data-source id="DS2">
+   <property key="Connection Type" value="PostgreSQL" />
+   <property key="Logical" value="dw_processo" />
+   <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/dw_processo" />
+   <property key="UID" value="postgres" />
+   <property key="PWD" value="admin" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+  <database id="DB0" populated="true" UUID="1840a705-26a8-4c1d-aa97-a50258dbb758" dbcs-ref="DS2" name="dw_processo" physicalName="dw_processo" >
+   <catalog id="CAT1" populated="true" UUID="928b0e9f-de01-4678-9c59-e5a53694cce1" name="dw_processo" nativeTerm="database" physicalName="dw_processo" >
+    <schema id="SCH2" populated="true" UUID="39537773-9d96-43fa-9d57-e11ba6032256" name="information_schema" nativeTerm="schema" physicalName="information_schema" >
+    </schema>
+    <schema id="SCH3" populated="true" UUID="cf3c6dcf-85c5-441b-a956-fe4a5368888b" name="pg_catalog" nativeTerm="schema" physicalName="pg_catalog" >
+    </schema>
+    <schema id="SCH4" populated="true" UUID="114e7e17-50c6-4be2-9500-5ac6c870f1b9" name="public" nativeTerm="schema" physicalName="public" >
+     <table id="TAB5" populated="true" UUID="03dbb006-1119-459d-bbff-1e8c3255d90a" name="dim_data" objectType="TABLE" physicalName="dim_data" >
+      <remarks></remarks>
+      <folder id="FOLTAB51" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL6" populated="true" UUID="dfbea4d7-aff8-4c4f-8a38-00cb49684afe" autoIncrement="false" name="sk_data" nullable="0" physicalName="sk_data" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL7" populated="true" UUID="fe3235e1-6e86-4b75-93b1-21656f6d2809" autoIncrement="false" name="nk_data" nullable="0" physicalName="nk_data" precision="13" referenceCount="1" scale="0" sourceDataTypeName="date" type="91" >
+        <remarks></remarks>
+       </column>
+       <column id="COL8" populated="true" UUID="86401a13-66b2-43d0-a3d7-881d427eff87" autoIncrement="false" name="desc_data_completa" nullable="0" physicalName="desc_data_completa" precision="60" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL9" populated="true" UUID="a9acebc3-8310-4b23-bba7-fd592779579c" autoIncrement="false" name="nr_ano" nullable="0" physicalName="nr_ano" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL10" populated="true" UUID="92eef5a0-4390-4360-bc89-224344f9ce0e" autoIncrement="false" name="nm_trimestre" nullable="0" physicalName="nm_trimestre" precision="20" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL11" populated="true" UUID="a8992d61-8b85-42ad-aadc-c43b3f057e64" autoIncrement="false" name="nr_ano_trimestre" nullable="0" physicalName="nr_ano_trimestre" precision="20" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL12" populated="true" UUID="061a959c-9987-44b6-bf59-c64d9b520e99" autoIncrement="false" name="nr_mes" nullable="0" physicalName="nr_mes" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL13" populated="true" UUID="78b7843e-f38e-47e7-99f4-7505ce24738d" autoIncrement="false" name="nm_mes" nullable="0" physicalName="nm_mes" precision="20" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL14" populated="true" UUID="51437d34-a4d1-42b6-9f7c-eafd36a213b8" autoIncrement="false" name="ano_mes" nullable="0" physicalName="ano_mes" precision="20" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL15" populated="true" UUID="bb39440e-1578-4203-87b8-5b1ac926896a" autoIncrement="false" name="nr_semana" nullable="0" physicalName="nr_semana" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL16" populated="true" UUID="c2c0b5ee-b09b-4a81-92a5-df5d99a5c408" autoIncrement="false" name="ano_semana" nullable="0" physicalName="ano_semana" precision="20" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL17" populated="true" UUID="5a3aa5be-b861-4595-99f8-9a93bf6668c6" autoIncrement="false" name="nr_dia" nullable="0" physicalName="nr_dia" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL18" populated="true" UUID="bb1bb527-6014-4167-9ed4-d1ebb1a3e0e8" autoIncrement="false" name="nr_dia_ano" nullable="0" physicalName="nr_dia_ano" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL19" populated="true" UUID="21afc00a-60ae-4356-89f7-6c6864f755d2" autoIncrement="false" name="nm_dia_semana" nullable="0" physicalName="nm_dia_semana" precision="20" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL20" populated="true" UUID="93455e7e-e2d9-4f6e-97d6-e2f49e6a57cf" autoIncrement="false" name="flag_final_semana" nullable="0" physicalName="flag_final_semana" precision="3" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL21" populated="true" UUID="9ea55a0c-a13c-4dd7-8e86-56e9f250b9b0" autoIncrement="false" name="flag_feriado" nullable="0" physicalName="flag_feriado" precision="3" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL22" populated="true" UUID="9da88423-fd1f-4a03-a1bc-1a1161cf6bee" autoIncrement="false" name="nm_feriado" nullable="0" physicalName="nm_feriado" precision="60" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL23" populated="true" UUID="3ada7ae4-9a51-4dbf-b939-8149ee7aa6a6" autoIncrement="false" name="etl_dt_inicio" nullable="0" physicalName="etl_dt_inicio" precision="29" referenceCount="1" scale="6" sourceDataTypeName="timestamp" type="93" >
+        <remarks></remarks>
+       </column>
+       <column id="COL24" populated="true" UUID="15638cac-7939-40f4-9353-3e40a4a9e8f0" autoIncrement="false" name="etl_dt_fim" nullable="0" physicalName="etl_dt_fim" precision="29" referenceCount="1" scale="6" sourceDataTypeName="timestamp" type="93" >
+        <remarks></remarks>
+       </column>
+       <column id="COL25" populated="true" UUID="9506461f-6a1f-45ff-8463-108a6a1ffe5e" autoIncrement="false" name="versao" nullable="0" physicalName="versao" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB53" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB52" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB54" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX26" populated="true" UUID="c0ecdc07-08f4-49b0-adfc-d0bc5df74354" clustered="false" name="sk_data_pk" physicalName="sk_data_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC27" populated="true" UUID="7aaab834-547b-4b51-bb98-fbfe02020633" ascendingOrDescending="UNSPECIFIED" column-ref="COL6" name="sk_data" physicalName="sk_data" />
+       </index>
+      </folder>
+     </table>
+    </schema>
+   </catalog>
+   <relationships>
+   </relationships>
+  </database>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB29" populated="true" UUID="587f9a7e-0a0e-41c7-aece-adcf1a3dd30f" name="fato_processo" objectType="TABLE" physicalName="fato_processo" >
+   <remarks></remarks>
+   <folder id="FOLTAB291" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL30" populated="true" UUID="cf43bbb4-e1e8-44d2-a8aa-da339ad3c970" autoIncrement="false" autoIncrementSequenceName="dim_advogado_sk_advogado_seq" defaultValue="" name="sk_advogado" nullable="0" physicalName="sk_advogado" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL31" populated="true" UUID="a6962172-63f8-443f-838c-6c4ad3f57f2a" autoIncrement="false" autoIncrementSequenceName="dim_cliente_sk_cliente_seq" defaultValue="" name="sk_cliente" nullable="0" physicalName="sk_cliente" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL32" populated="true" UUID="3b2ed911-36a0-42b5-a224-3a8379e0fe0a" autoIncrement="false" defaultValue="" name="sk_data" nullable="0" physicalName="sk_data" precision="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL33" populated="true" UUID="81241b2f-7e0c-4af5-8861-a51b40370b5a" autoIncrement="false" autoIncrementSequenceName="fato_processo_num_processo_seq" defaultValue="" name="num_processo" nullable="0" physicalName="num_processo" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL34" populated="true" UUID="9c4f12e3-d925-4154-a9be-f046aa2e3e1a" autoIncrement="false" autoIncrementSequenceName="fato_processo_tipo_processo_seq" defaultValue="" name="tipo_processo" nullable="0" physicalName="tipo_processo" precision="15" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL35" populated="true" UUID="4de40082-bf15-46e3-86b9-ae419c933821" autoIncrement="false" autoIncrementSequenceName="fato_processo_vl_recebido_seq" defaultValue="" name="vl_recebido" nullable="0" physicalName="vl_recebido" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB293" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB292" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB294" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX36" populated="true" UUID="b3d67611-4734-48a1-9c90-e736e869df49" clustered="false" name="fato_processo_pk" physicalName="fato_processo_pk" primaryKeyIndex="true" unique="false" >
+    </index>
+   </folder>
+  </table>
+  <table id="TAB37" populated="true" UUID="ca10de3f-7a09-4bf6-938e-6304bf2b1397" name="dim_cliente" objectType="TABLE" physicalName="dim_cliente" >
+   <remarks></remarks>
+   <folder id="FOLTAB371" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL38" populated="true" UUID="2f7f3bc0-c126-47ce-a629-d864396fef4d" autoIncrement="true" autoIncrementSequenceName="dim_cliente_sk_cliente_seq" defaultValue="" name="sk_cliente" nullable="0" physicalName="sk_cliente" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL39" populated="true" UUID="f662dc9f-daf6-451d-9a1f-981a7deb6960" autoIncrement="false" autoIncrementSequenceName="dim_cliente_nk_cliente_seq" defaultValue="" name="nk_cliente" nullable="0" physicalName="nk_cliente" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL40" populated="true" UUID="e1a8f6ca-7948-4a24-b1a9-858a17799565" autoIncrement="false" autoIncrementSequenceName="dim_cliente_nm_cliente_seq" defaultValue="" name="nm_cliente" nullable="0" physicalName="nm_cliente" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL41" populated="true" UUID="79145115-88a3-4e86-abf8-d1857729b325" autoIncrement="false" autoIncrementSequenceName="dim_cliente_genero_seq" defaultValue="" name="genero" nullable="0" physicalName="genero" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL42" populated="true" UUID="7ef82961-347f-4879-bb1e-91461c7f5053" autoIncrement="false" autoIncrementSequenceName="dim_cliente_dt_nascimento_seq" defaultValue="" name="dt_nascimento" nullable="0" physicalName="dt_nascimento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL43" populated="true" UUID="0aeadf7f-8c0b-42c3-a0b9-eb24f6b7839a" autoIncrement="false" autoIncrementSequenceName="dim_cliente_profissao_seq" defaultValue="" name="profissao" nullable="0" physicalName="profissao" precision="25" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL44" populated="true" UUID="13e2e203-9a1b-491f-ba22-473c5c63eb67" autoIncrement="false" autoIncrementSequenceName="dim_cliente_estado_civil_seq" defaultValue="" name="estado_civil" nullable="0" physicalName="estado_civil" precision="10" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL45" populated="true" UUID="345c9d8b-d484-4f85-813e-e88083d70bfa" autoIncrement="false" autoIncrementSequenceName="dim_cliente_etl_dt_inicio_seq" defaultValue="" name="etl_dt_inicio" nullable="0" physicalName="etl_dt_inicio" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL46" populated="true" UUID="648807d6-8482-49e2-bd31-e546a4293adb" autoIncrement="false" autoIncrementSequenceName="dim_cliente_etl_dt_fim_seq" defaultValue="" name="etl_dt_fim" nullable="0" physicalName="etl_dt_fim" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL47" populated="true" UUID="7328b345-4766-4490-b10d-30edc590071b" autoIncrement="false" autoIncrementSequenceName="dim_cliente_versao_seq" defaultValue="" name="versao" nullable="0" physicalName="versao" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB373" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB372" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB374" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX48" populated="true" UUID="547c89f4-81a0-4caa-8bdc-38ed9a74db2f" clustered="false" name="sk_cliente" physicalName="sk_cliente" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC49" populated="true" UUID="2659aef8-3293-4624-b644-f211221fcea0" ascendingOrDescending="UNSPECIFIED" column-ref="COL38" name="sk_cliente" physicalName="sk_cliente" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB50" populated="true" UUID="47178c61-523b-4a07-885e-2b4b3699a0f1" name="dim_advogado" objectType="TABLE" physicalName="dim_advogado" >
+   <remarks></remarks>
+   <folder id="FOLTAB501" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL51" populated="true" UUID="ff2992d8-89c2-4449-93e4-f2fe2a51ed8f" autoIncrement="true" autoIncrementSequenceName="dim_advogado_sk_advogado_seq" defaultValue="" name="sk_advogado" nullable="0" physicalName="sk_advogado" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL52" populated="true" UUID="fea8e77e-8263-49b5-9c40-f373d842f7c7" autoIncrement="false" autoIncrementSequenceName="dim_advogado_nk_advogado_seq" defaultValue="" name="nk_advogado" nullable="0" physicalName="nk_advogado" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL53" populated="true" UUID="8fd0bd72-a5f8-4d67-abec-31421b229b98" autoIncrement="false" autoIncrementSequenceName="dim_advogado_nm_advogado_seq" defaultValue="" name="nm_advogado" nullable="0" physicalName="nm_advogado" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL54" populated="true" UUID="b081481b-74b5-4c40-b145-f9bc2cf63de5" autoIncrement="false" autoIncrementSequenceName="dim_advogado_etl_dt_inicio_seq" defaultValue="" name="etl_dt_inicio" nullable="0" physicalName="etl_dt_inicio" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL55" populated="true" UUID="3b2f1a2a-e334-4dbf-a469-cb352b1e1871" autoIncrement="false" autoIncrementSequenceName="dim_advogado_etl_dt_fim_seq" defaultValue="" name="etl_dt_fim" nullable="0" physicalName="etl_dt_fim" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL56" populated="true" UUID="f382dd3c-cb5a-41fc-b590-3328709a2858" autoIncrement="false" autoIncrementSequenceName="dim_advogado_versao_seq" defaultValue="" name="versao" nullable="0" physicalName="versao" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB503" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB502" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB504" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX57" populated="true" UUID="4fe0259a-a683-44f1-83b9-0b5049afd8b3" clustered="false" name="sk_advogado" physicalName="sk_advogado" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC58" populated="true" UUID="57af0dba-6ba3-49c4-a1eb-7d09cb2238c3" ascendingOrDescending="UNSPECIFIED" column-ref="COL51" name="sk_advogado" physicalName="sk_advogado" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB59" populated="true" UUID="46ce7692-7e86-4bfe-95f4-930eb5f64914" name="dim_data" objectType="TABLE" physicalName="dim_data" >
+   <remarks></remarks>
+   <folder id="FOLTAB591" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL60" populated="true" UUID="ce1f26d4-380f-4393-b0c1-a48fc9457640" autoIncrement="false" defaultValue="" name="sk_data" nullable="0" physicalName="sk_data" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL6" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL61" populated="true" UUID="9574c12c-454d-4f6a-bfd1-0005ceb5d373" autoIncrement="false" defaultValue="" name="nk_data" nullable="0" physicalName="nk_data" precision="0" referenceCount="1" scale="0" source-column-ref="COL7" sourceDataTypeName="date" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL62" populated="true" UUID="19e5b2ec-4bf2-4e4e-be96-7ac66dd9fc76" autoIncrement="false" defaultValue="" name="desc_data_completa" nullable="0" physicalName="desc_data_completa" precision="60" referenceCount="1" scale="0" source-column-ref="COL8" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL63" populated="true" UUID="4c147fa6-ef9c-4af0-9148-edec6df4b05a" autoIncrement="false" defaultValue="" name="nr_ano" nullable="0" physicalName="nr_ano" precision="0" referenceCount="1" scale="0" source-column-ref="COL9" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL64" populated="true" UUID="d7eff596-5a0a-4c7e-9133-945f6987d41d" autoIncrement="false" defaultValue="" name="nm_trimestre" nullable="0" physicalName="nm_trimestre" precision="20" referenceCount="1" scale="0" source-column-ref="COL10" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL65" populated="true" UUID="705412a2-4612-441f-b209-dffecdfec35c" autoIncrement="false" defaultValue="" name="nr_ano_trimestre" nullable="0" physicalName="nr_ano_trimestre" precision="20" referenceCount="1" scale="0" source-column-ref="COL11" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL66" populated="true" UUID="5cea63a3-9a7a-4b07-98d1-199821050076" autoIncrement="false" defaultValue="" name="nr_mes" nullable="0" physicalName="nr_mes" precision="0" referenceCount="1" scale="0" source-column-ref="COL12" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL67" populated="true" UUID="3e482d2b-8601-4d47-a600-4f8cc66f7d62" autoIncrement="false" defaultValue="" name="nm_mes" nullable="0" physicalName="nm_mes" precision="20" referenceCount="1" scale="0" source-column-ref="COL13" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL68" populated="true" UUID="19259ef9-2ddd-4371-8f71-fee67bfc1499" autoIncrement="false" defaultValue="" name="ano_mes" nullable="0" physicalName="ano_mes" precision="20" referenceCount="1" scale="0" source-column-ref="COL14" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL69" populated="true" UUID="88c03e20-1f54-4d0b-a2e0-c5018588da2b" autoIncrement="false" defaultValue="" name="nr_semana" nullable="0" physicalName="nr_semana" precision="0" referenceCount="1" scale="0" source-column-ref="COL15" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL70" populated="true" UUID="4187f6d6-8f32-47d1-b129-80f6fa94f99b" autoIncrement="false" defaultValue="" name="ano_semana" nullable="0" physicalName="ano_semana" precision="20" referenceCount="1" scale="0" source-column-ref="COL16" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL71" populated="true" UUID="936ade21-a7d0-4f79-b9de-aa237ce6369e" autoIncrement="false" defaultValue="" name="nr_dia" nullable="0" physicalName="nr_dia" precision="0" referenceCount="1" scale="0" source-column-ref="COL17" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL72" populated="true" UUID="e37bc0a3-ecfa-4719-bb20-b8d4654c8017" autoIncrement="false" defaultValue="" name="nr_dia_ano" nullable="0" physicalName="nr_dia_ano" precision="0" referenceCount="1" scale="0" source-column-ref="COL18" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL73" populated="true" UUID="5f581456-3134-408d-bcb4-4d137d72c6d4" autoIncrement="false" defaultValue="" name="nm_dia_semana" nullable="0" physicalName="nm_dia_semana" precision="20" referenceCount="1" scale="0" source-column-ref="COL19" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL74" populated="true" UUID="e334b4c4-fffe-4f87-987f-0b0cdf947064" autoIncrement="false" defaultValue="" name="flag_final_semana" nullable="0" physicalName="flag_final_semana" precision="3" referenceCount="1" scale="0" source-column-ref="COL20" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL75" populated="true" UUID="1556ab3e-a8c4-463f-9d1c-30d9e2fa4ab1" autoIncrement="false" defaultValue="" name="flag_feriado" nullable="0" physicalName="flag_feriado" precision="3" referenceCount="1" scale="0" source-column-ref="COL21" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL76" populated="true" UUID="dc401023-02b3-4492-a9f2-409eeb887a71" autoIncrement="false" defaultValue="" name="nm_feriado" nullable="0" physicalName="nm_feriado" precision="60" referenceCount="1" scale="0" source-column-ref="COL22" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL77" populated="true" UUID="41dc7262-c2bd-4f7e-9c7e-8fdd3c14eb62" autoIncrement="false" defaultValue="" name="etl_dt_inicio" nullable="0" physicalName="etl_dt_inicio" precision="0" referenceCount="1" scale="0" source-column-ref="COL23" sourceDataTypeName="timestamp" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL78" populated="true" UUID="93de0047-649c-4ab0-a5c1-84d31eaa5bff" autoIncrement="false" defaultValue="" name="etl_dt_fim" nullable="0" physicalName="etl_dt_fim" precision="0" referenceCount="1" scale="0" source-column-ref="COL24" sourceDataTypeName="timestamp" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL79" populated="true" UUID="adec9b74-2fb5-44c2-bd3c-4ff669a4a3bb" autoIncrement="false" defaultValue="" name="versao" nullable="0" physicalName="versao" precision="0" referenceCount="1" scale="0" source-column-ref="COL25" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB593" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB592" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB594" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX80" populated="true" UUID="180c63f8-0cc1-4565-a990-f8c2c76e667f" clustered="false" name="sk_data_pk" physicalName="sk_data_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC81" populated="true" UUID="6475056b-2f3c-449f-b332-f57e0e0993ed" ascendingOrDescending="UNSPECIFIED" column-ref="COL60" name="sk_data" physicalName="sk_data" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL82" populated="true" UUID="61126e9c-b232-4f22-8a17-d477e0097526" deferrability="7" deleteRule="3" fk-table-ref="TAB29" fkCardinality="7" identifying="false" name="dim_cliente_fato_processo_fk" physicalName="dim_cliente_fato_processo_fk" pk-table-ref="TAB37" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP83" populated="true" UUID="f5503b63-0689-43d8-8baa-2dff6522d881" fk-column-ref="COL31" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL38" />
+   </relationship>
+   <relationship id="REL84" populated="true" UUID="c9b4712f-a293-4ef5-ba62-b5cd71bf0748" deferrability="7" deleteRule="3" fk-table-ref="TAB29" fkCardinality="7" identifying="false" name="dim_advogado_fato_processo_fk" physicalName="dim_advogado_fato_processo_fk" pk-table-ref="TAB50" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP85" populated="true" UUID="39e40ebd-c7c3-4a65-bde7-0d74166a056d" fk-column-ref="COL30" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL51" />
+   </relationship>
+   <relationship id="REL86" populated="true" UUID="1f31424e-61a9-488c-ac8f-eefd1e1658d3" deferrability="7" deleteRule="3" fk-table-ref="TAB29" fkCardinality="7" identifying="false" name="dim_data_fato_processo_fk" physicalName="dim_data_fato_processo_fk" pk-table-ref="TAB59" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP87" populated="true" UUID="5da850b9-976a-41eb-bd1c-a4c0c916d74e" fk-column-ref="COL32" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL60" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="0.8408964152537143" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB29" x="444" y="139" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB37" x="61" y="144" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB50" x="826" y="143" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB59" x="437" y="382" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL82" pkConnection="0.28346456692913385" fkConnection="0.19469026548672566" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL84" pkConnection="0.5070422535211268" fkConnection="0.19469026548672566" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL86" pkConnection="0.484" fkConnection="0.5022026431718062" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  <table-profile-result ref-id="TAB5" createStartTime="1648038195019" createEndTime="1648038195445" exception="false" rowCount="5480" UUID="12cbc4a5-5d4c-41a3-a669-b40f6843ca2e">
+   <column-profile-result ref-id="COL6" createStartTime="1648038195048" createEndTime="1648038195079" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="5480" UUID="2a64cad1-db0c-4d8d-b570-c4b0c3e502f6">
+    <avgValue type="java.lang.String" value="20262242.739598540146"/>
+    <maxValue type="java.lang.Integer" value="20340227"/>
+    <minValue type="java.lang.Integer" value="20190227"/>
+    <topNvalue count="1" type="java.lang.Integer" value="20190227" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.Integer" value="20190228" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.Integer" value="20190301" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.Integer" value="20190302" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.Integer" value="20190303" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.Integer" value="20190304" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.Integer" value="20190305" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.Integer" value="20190306" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.Integer" value="20190307" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.Integer" value="20190308" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="5470" type="java.lang.String" value="Other Values" percent="0.9981751824817519" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL7" createStartTime="1648038195079" createEndTime="1648038195111" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="5480" UUID="d34b9941-22ed-4b3e-b23b-b91875c88395">
+    <maxValue type="java.lang.String" value="2034-02-27"/>
+    <minValue type="java.lang.String" value="2019-02-27"/>
+    <topNvalue count="1" type="java.lang.String" value="2030-10-03" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2032-02-01" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2025-05-02" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2020-12-23" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2031-04-04" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2024-09-29" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2030-05-15" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2024-12-26" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2022-05-23" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2026-08-11" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="5470" type="java.lang.String" value="Other Values" percent="0.9981751824817519" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL8" createStartTime="1648038195111" createEndTime="1648038195193" exception="false" avgLength="10.0" minLength="10" maxLength="10" nullCount="0" distinctValueCount="5480" UUID="3580e06b-f184-4778-b1f9-010952f37eff">
+    <maxValue type="java.lang.String" value="31/12/2033"/>
+    <minValue type="java.lang.String" value="01/01/2020"/>
+    <topNvalue count="1" type="java.lang.String" value="09/08/2028" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="22/01/2027" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="25/02/2027" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="08/01/2030" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="19/04/2022" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="02/09/2021" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="22/06/2030" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="22/04/2020" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="08/06/2028" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="02/07/2025" percent="1.824817518248175E-4" otherValues="false"/>
+    <topNvalue count="5470" type="java.lang.String" value="Other Values" percent="0.9981751824817519" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL9" createStartTime="1648038195194" createEndTime="1648038195203" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="16" UUID="ed47f989-a563-4e71-8540-957521ab1e36">
+    <avgValue type="java.lang.String" value="2026.1574817518248175"/>
+    <maxValue type="java.lang.Integer" value="2034"/>
+    <minValue type="java.lang.Integer" value="2019"/>
+    <topNvalue count="366" type="java.lang.Integer" value="2024" percent="0.0667883211678832" otherValues="false"/>
+    <topNvalue count="366" type="java.lang.Integer" value="2032" percent="0.0667883211678832" otherValues="false"/>
+    <topNvalue count="366" type="java.lang.Integer" value="2028" percent="0.0667883211678832" otherValues="false"/>
+    <topNvalue count="366" type="java.lang.Integer" value="2020" percent="0.0667883211678832" otherValues="false"/>
+    <topNvalue count="365" type="java.lang.Integer" value="2027" percent="0.0666058394160584" otherValues="false"/>
+    <topNvalue count="365" type="java.lang.Integer" value="2022" percent="0.0666058394160584" otherValues="false"/>
+    <topNvalue count="365" type="java.lang.Integer" value="2030" percent="0.0666058394160584" otherValues="false"/>
+    <topNvalue count="365" type="java.lang.Integer" value="2033" percent="0.0666058394160584" otherValues="false"/>
+    <topNvalue count="365" type="java.lang.Integer" value="2021" percent="0.0666058394160584" otherValues="false"/>
+    <topNvalue count="365" type="java.lang.Integer" value="2025" percent="0.0666058394160584" otherValues="false"/>
+    <topNvalue count="1826" type="java.lang.String" value="Other Values" percent="0.3332116788321168" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL10" createStartTime="1648038195203" createEndTime="1648038195221" exception="false" avgLength="2.0" minLength="2" maxLength="2" nullCount="0" distinctValueCount="4" UUID="2e7b84e7-21c1-4f15-9a89-735b45e11dfb">
+    <maxValue type="java.lang.String" value="T4"/>
+    <minValue type="java.lang.String" value="T1"/>
+    <topNvalue count="1380" type="java.lang.String" value="T3" percent="0.2518248175182482" otherValues="false"/>
+    <topNvalue count="1380" type="java.lang.String" value="T4" percent="0.2518248175182482" otherValues="false"/>
+    <topNvalue count="1365" type="java.lang.String" value="T2" percent="0.2490875912408759" otherValues="false"/>
+    <topNvalue count="1355" type="java.lang.String" value="T1" percent="0.24726277372262773" otherValues="false"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL11" createStartTime="1648038195221" createEndTime="1648038195247" exception="false" avgLength="7.0" minLength="7" maxLength="7" nullCount="0" distinctValueCount="61" UUID="37ee053c-7dc6-4f1c-a2e7-d945d5a69018">
+    <maxValue type="java.lang.String" value="T4/2033"/>
+    <minValue type="java.lang.String" value="T1/2019"/>
+    <topNvalue count="92" type="java.lang.String" value="T3/2022" percent="0.016788321167883213" otherValues="false"/>
+    <topNvalue count="92" type="java.lang.String" value="T4/2030" percent="0.016788321167883213" otherValues="false"/>
+    <topNvalue count="92" type="java.lang.String" value="T3/2024" percent="0.016788321167883213" otherValues="false"/>
+    <topNvalue count="92" type="java.lang.String" value="T4/2021" percent="0.016788321167883213" otherValues="false"/>
+    <topNvalue count="92" type="java.lang.String" value="T3/2030" percent="0.016788321167883213" otherValues="false"/>
+    <topNvalue count="92" type="java.lang.String" value="T3/2031" percent="0.016788321167883213" otherValues="false"/>
+    <topNvalue count="92" type="java.lang.String" value="T4/2032" percent="0.016788321167883213" otherValues="false"/>
+    <topNvalue count="92" type="java.lang.String" value="T4/2024" percent="0.016788321167883213" otherValues="false"/>
+    <topNvalue count="92" type="java.lang.String" value="T3/2032" percent="0.016788321167883213" otherValues="false"/>
+    <topNvalue count="92" type="java.lang.String" value="T3/2023" percent="0.016788321167883213" otherValues="false"/>
+    <topNvalue count="4560" type="java.lang.String" value="Other Values" percent="0.8321167883211679" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL12" createStartTime="1648038195247" createEndTime="1648038195254" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="12" UUID="adbd593e-843e-4e86-91b0-801cbc239fd2">
+    <avgValue type="java.lang.String" value="6.5218978102189781"/>
+    <maxValue type="java.lang.Integer" value="12"/>
+    <minValue type="java.lang.Integer" value="1"/>
+    <topNvalue count="465" type="java.lang.Integer" value="12" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="465" type="java.lang.Integer" value="3" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="465" type="java.lang.Integer" value="8" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="465" type="java.lang.Integer" value="10" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="465" type="java.lang.Integer" value="7" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="465" type="java.lang.Integer" value="1" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="465" type="java.lang.Integer" value="5" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="450" type="java.lang.Integer" value="11" percent="0.08211678832116788" otherValues="false"/>
+    <topNvalue count="450" type="java.lang.Integer" value="6" percent="0.08211678832116788" otherValues="false"/>
+    <topNvalue count="450" type="java.lang.Integer" value="9" percent="0.08211678832116788" otherValues="false"/>
+    <topNvalue count="875" type="java.lang.String" value="Other Values" percent="0.15967153284671534" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL13" createStartTime="1648038195254" createEndTime="1648038195274" exception="false" avgLength="6.396897810218978" minLength="4" maxLength="9" nullCount="0" distinctValueCount="12" UUID="dc928838-9eac-4ecd-a7be-0552498eb6f8">
+    <maxValue type="java.lang.String" value="Setembro"/>
+    <minValue type="java.lang.String" value="Abril"/>
+    <topNvalue count="465" type="java.lang.String" value="Outubro" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="465" type="java.lang.String" value="Dezembro" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="465" type="java.lang.String" value="Maio" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="465" type="java.lang.String" value="Março" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="465" type="java.lang.String" value="Agosto" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="465" type="java.lang.String" value="Janeiro" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="465" type="java.lang.String" value="Julho" percent="0.08485401459854014" otherValues="false"/>
+    <topNvalue count="450" type="java.lang.String" value="Setembro" percent="0.08211678832116788" otherValues="false"/>
+    <topNvalue count="450" type="java.lang.String" value="Novembro" percent="0.08211678832116788" otherValues="false"/>
+    <topNvalue count="450" type="java.lang.String" value="Junho" percent="0.08211678832116788" otherValues="false"/>
+    <topNvalue count="875" type="java.lang.String" value="Other Values" percent="0.15967153284671534" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL14" createStartTime="1648038195274" createEndTime="1648038195300" exception="false" avgLength="7.0" minLength="7" maxLength="7" nullCount="0" distinctValueCount="181" UUID="3318f4dc-a6f8-4799-baf6-9c10ca84582d">
+    <maxValue type="java.lang.String" value="2034/02"/>
+    <minValue type="java.lang.String" value="2019/02"/>
+    <topNvalue count="31" type="java.lang.String" value="2030/12" percent="0.0056569343065693434" otherValues="false"/>
+    <topNvalue count="31" type="java.lang.String" value="2026/05" percent="0.0056569343065693434" otherValues="false"/>
+    <topNvalue count="31" type="java.lang.String" value="2027/10" percent="0.0056569343065693434" otherValues="false"/>
+    <topNvalue count="31" type="java.lang.String" value="2020/07" percent="0.0056569343065693434" otherValues="false"/>
+    <topNvalue count="31" type="java.lang.String" value="2028/07" percent="0.0056569343065693434" otherValues="false"/>
+    <topNvalue count="31" type="java.lang.String" value="2024/10" percent="0.0056569343065693434" otherValues="false"/>
+    <topNvalue count="31" type="java.lang.String" value="2024/01" percent="0.0056569343065693434" otherValues="false"/>
+    <topNvalue count="31" type="java.lang.String" value="2022/08" percent="0.0056569343065693434" otherValues="false"/>
+    <topNvalue count="31" type="java.lang.String" value="2032/08" percent="0.0056569343065693434" otherValues="false"/>
+    <topNvalue count="31" type="java.lang.String" value="2028/01" percent="0.0056569343065693434" otherValues="false"/>
+    <topNvalue count="5170" type="java.lang.String" value="Other Values" percent="0.9434306569343066" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL15" createStartTime="1648038195300" createEndTime="1648038195308" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="53" UUID="f1de3312-a654-4913-b6f4-ccac08a474be">
+    <avgValue type="java.lang.String" value="26.6047445255474453"/>
+    <maxValue type="java.lang.Integer" value="53"/>
+    <minValue type="java.lang.Integer" value="1"/>
+    <topNvalue count="105" type="java.lang.Integer" value="11" percent="0.01916058394160584" otherValues="false"/>
+    <topNvalue count="105" type="java.lang.Integer" value="29" percent="0.01916058394160584" otherValues="false"/>
+    <topNvalue count="105" type="java.lang.Integer" value="4" percent="0.01916058394160584" otherValues="false"/>
+    <topNvalue count="105" type="java.lang.Integer" value="34" percent="0.01916058394160584" otherValues="false"/>
+    <topNvalue count="105" type="java.lang.Integer" value="51" percent="0.01916058394160584" otherValues="false"/>
+    <topNvalue count="105" type="java.lang.Integer" value="41" percent="0.01916058394160584" otherValues="false"/>
+    <topNvalue count="105" type="java.lang.Integer" value="46" percent="0.01916058394160584" otherValues="false"/>
+    <topNvalue count="105" type="java.lang.Integer" value="40" percent="0.01916058394160584" otherValues="false"/>
+    <topNvalue count="105" type="java.lang.Integer" value="52" percent="0.01916058394160584" otherValues="false"/>
+    <topNvalue count="105" type="java.lang.Integer" value="43" percent="0.01916058394160584" otherValues="false"/>
+    <topNvalue count="4430" type="java.lang.String" value="Other Values" percent="0.8083941605839416" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL16" createStartTime="1648038195308" createEndTime="1648038195338" exception="false" avgLength="7.0" minLength="7" maxLength="7" nullCount="0" distinctValueCount="784" UUID="ba2590aa-eb87-461e-a304-53bedfd13ca6">
+    <maxValue type="java.lang.String" value="2034/09"/>
+    <minValue type="java.lang.String" value="2019/09"/>
+    <topNvalue count="7" type="java.lang.String" value="2019/12" percent="0.0012773722627737226" otherValues="false"/>
+    <topNvalue count="7" type="java.lang.String" value="2029/26" percent="0.0012773722627737226" otherValues="false"/>
+    <topNvalue count="7" type="java.lang.String" value="2030/27" percent="0.0012773722627737226" otherValues="false"/>
+    <topNvalue count="7" type="java.lang.String" value="2026/18" percent="0.0012773722627737226" otherValues="false"/>
+    <topNvalue count="7" type="java.lang.String" value="2027/48" percent="0.0012773722627737226" otherValues="false"/>
+    <topNvalue count="7" type="java.lang.String" value="2023/40" percent="0.0012773722627737226" otherValues="false"/>
+    <topNvalue count="7" type="java.lang.String" value="2022/26" percent="0.0012773722627737226" otherValues="false"/>
+    <topNvalue count="7" type="java.lang.String" value="2026/13" percent="0.0012773722627737226" otherValues="false"/>
+    <topNvalue count="7" type="java.lang.String" value="2022/42" percent="0.0012773722627737226" otherValues="false"/>
+    <topNvalue count="7" type="java.lang.String" value="2030/23" percent="0.0012773722627737226" otherValues="false"/>
+    <topNvalue count="5410" type="java.lang.String" value="Other Values" percent="0.9872262773722628" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL17" createStartTime="1648038195338" createEndTime="1648038195347" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="31" UUID="26131835-ddc7-473d-add7-f527ecd75818">
+    <avgValue type="java.lang.String" value="15.7322992700729927"/>
+    <maxValue type="java.lang.Integer" value="31"/>
+    <minValue type="java.lang.Integer" value="1"/>
+    <topNvalue count="181" type="java.lang.Integer" value="27" percent="0.03302919708029197" otherValues="false"/>
+    <topNvalue count="180" type="java.lang.Integer" value="4" percent="0.032846715328467155" otherValues="false"/>
+    <topNvalue count="180" type="java.lang.Integer" value="10" percent="0.032846715328467155" otherValues="false"/>
+    <topNvalue count="180" type="java.lang.Integer" value="9" percent="0.032846715328467155" otherValues="false"/>
+    <topNvalue count="180" type="java.lang.Integer" value="7" percent="0.032846715328467155" otherValues="false"/>
+    <topNvalue count="180" type="java.lang.Integer" value="15" percent="0.032846715328467155" otherValues="false"/>
+    <topNvalue count="180" type="java.lang.Integer" value="6" percent="0.032846715328467155" otherValues="false"/>
+    <topNvalue count="180" type="java.lang.Integer" value="26" percent="0.032846715328467155" otherValues="false"/>
+    <topNvalue count="180" type="java.lang.Integer" value="12" percent="0.032846715328467155" otherValues="false"/>
+    <topNvalue count="180" type="java.lang.Integer" value="24" percent="0.032846715328467155" otherValues="false"/>
+    <topNvalue count="3679" type="java.lang.String" value="Other Values" percent="0.6713503649635036" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL18" createStartTime="1648038195347" createEndTime="1648038195355" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="366" UUID="a8ee59de-7dfd-4576-accf-e67ccdbc25a8">
+    <avgValue type="java.lang.String" value="183.1107664233576642"/>
+    <maxValue type="java.lang.Integer" value="366"/>
+    <minValue type="java.lang.Integer" value="1"/>
+    <topNvalue count="16" type="java.lang.Integer" value="58" percent="0.00291970802919708" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.Integer" value="184" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.Integer" value="116" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.Integer" value="87" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.Integer" value="273" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.Integer" value="51" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.Integer" value="272" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.Integer" value="70" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.Integer" value="190" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.Integer" value="350" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="5329" type="java.lang.String" value="Other Values" percent="0.9724452554744526" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL19" createStartTime="1648038195355" createEndTime="1648038195375" exception="false" avgLength="10.28558394160584" minLength="6" maxLength="13" nullCount="0" distinctValueCount="7" UUID="1d1b4ea4-c203-4d50-9d23-55cdad5d3ec5">
+    <maxValue type="java.lang.String" value="Terça-Feira"/>
+    <minValue type="java.lang.String" value="Domingo"/>
+    <topNvalue count="783" type="java.lang.String" value="Segunda-Feira" percent="0.1428832116788321" otherValues="false"/>
+    <topNvalue count="783" type="java.lang.String" value="Quarta-Feira" percent="0.1428832116788321" otherValues="false"/>
+    <topNvalue count="783" type="java.lang.String" value="Domingo" percent="0.1428832116788321" otherValues="false"/>
+    <topNvalue count="783" type="java.lang.String" value="Sábado" percent="0.1428832116788321" otherValues="false"/>
+    <topNvalue count="783" type="java.lang.String" value="Quinta-Feira" percent="0.1428832116788321" otherValues="false"/>
+    <topNvalue count="783" type="java.lang.String" value="Sexta-Feira" percent="0.1428832116788321" otherValues="false"/>
+    <topNvalue count="782" type="java.lang.String" value="Terça-Feira" percent="0.1427007299270073" otherValues="false"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL20" createStartTime="1648038195375" createEndTime="1648038195389" exception="false" avgLength="3.0" minLength="3" maxLength="3" nullCount="0" distinctValueCount="2" UUID="d179b61a-2d26-4df9-a191-9d6b932a693a">
+    <maxValue type="java.lang.String" value="Sim"/>
+    <minValue type="java.lang.String" value="Não"/>
+    <topNvalue count="3914" type="java.lang.String" value="Não" percent="0.7142335766423358" otherValues="false"/>
+    <topNvalue count="1566" type="java.lang.String" value="Sim" percent="0.2857664233576642" otherValues="false"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL21" createStartTime="1648038195390" createEndTime="1648038195403" exception="false" avgLength="3.0" minLength="3" maxLength="3" nullCount="0" distinctValueCount="2" UUID="4aaa686d-f5bd-46d5-b90c-1461650ee4e7">
+    <maxValue type="java.lang.String" value="Sim"/>
+    <minValue type="java.lang.String" value="Não"/>
+    <topNvalue count="5345" type="java.lang.String" value="Não" percent="0.9753649635036497" otherValues="false"/>
+    <topNvalue count="135" type="java.lang.String" value="Sim" percent="0.024635036496350366" otherValues="false"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL22" createStartTime="1648038195403" createEndTime="1648038195421" exception="false" avgLength="13.041058394160585" minLength="5" maxLength="24" nullCount="0" distinctValueCount="10" UUID="43822ce5-9e10-4468-8588-19e9fc9406ac">
+    <maxValue type="java.lang.String" value="Tiradentes"/>
+    <minValue type="java.lang.String" value="Ano Novo"/>
+    <topNvalue count="5345" type="java.lang.String" value="Não é Feriado" percent="0.9753649635036497" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.String" value="Proclamação da República" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.String" value="Dia da Consciência Negra" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.String" value="Nossa Senhora Aparecida" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.String" value="Tiradentes" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.String" value="Ano Novo" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.String" value="Finados" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.String" value="Dia da Pátria" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.String" value="Natal" percent="0.002737226277372263" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.String" value="Dia do Trabalhador" percent="0.002737226277372263" otherValues="false"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL23" createStartTime="1648038195421" createEndTime="1648038195430" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="1" UUID="a5114f1c-af7f-496a-a240-8637739a6922">
+    <maxValue type="java.lang.String" value="2022-03-23 09:22:14.246877"/>
+    <minValue type="java.lang.String" value="2022-03-23 09:22:14.246877"/>
+    <topNvalue count="5480" type="java.lang.String" value="2022-03-23 09:22:14.246877" percent="1.0" otherValues="false"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL24" createStartTime="1648038195430" createEndTime="1648038195438" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="1" UUID="e23e61db-b145-4e8b-9dfc-43daef14a67f">
+    <maxValue type="java.lang.String" value="2199-12-31 00:00:00.0"/>
+    <minValue type="java.lang.String" value="2199-12-31 00:00:00.0"/>
+    <topNvalue count="5480" type="java.lang.String" value="2199-12-31 00:00:00.0" percent="1.0" otherValues="false"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL25" createStartTime="1648038195438" createEndTime="1648038195445" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="1" UUID="95b9383b-91d7-491d-ae4d-8aa1d743f328">
+    <avgValue type="java.lang.String" value="1.00000000000000000000"/>
+    <maxValue type="java.lang.Integer" value="1"/>
+    <minValue type="java.lang.Integer" value="1"/>
+    <topNvalue count="5480" type="java.lang.Integer" value="1" percent="1.0" otherValues="false"/>
+   </column-profile-result>
+  </table-profile-result>
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
