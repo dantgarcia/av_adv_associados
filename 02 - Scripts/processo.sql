@@ -8,7 +8,7 @@ create table processo (
 	cod_cliente INT,
     cod_adv INT,
 	FOREIGN KEY (cod_cliente) REFERENCES cliente (cod_cliente),
-	FOREIGN KEY (cod_adv) REFERENCES funcionario (cod_adv)
+	FOREIGN KEY (cod_adv) REFERENCES advogado (cod_adv)
 	
 );
 insert into processo (cod_processo, num_processo, tipo, dt_inicio, dt_fim, valor) values (1, '226666-26.0128.2.48.5186', 'Civel', '2021-01-21', '2021-07-12', '6303.60');
