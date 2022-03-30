@@ -18,6 +18,8 @@ Tecnologias
 
 As seguintes ferramentas forma utilizadas para construção do projeto:
 * brModelo
+* Postgres
+* Power Architect
 * PowerBi
 
 ___________________________________________________________________________________________________________________________________________________________________________________
